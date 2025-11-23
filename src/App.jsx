@@ -36,13 +36,13 @@ export default function App() {
         <CartProvider>
           <Routes>
             <Route
-              path="/pizza-delivery/"
+              path="/"
               element={
                 <StartPage darkMode={darkMode} changeMode={changeMode} />
               }
             />
             <Route
-              path="/pizza-delivery/dashboard"
+              path="/dashboard"
               element={<Layout darkMode={darkMode} changeMode={changeMode} />}
             >
               {/* Using Suspense for lazy-loaded routes */}
@@ -57,7 +57,7 @@ export default function App() {
                 }
               />
               <Route
-                path="/pizza-delivery/dashboard/menu"
+                path="menu"
                 element={
                   <React.Suspense
                     fallback={<Loading displayItem="Loading Menu..." />}
@@ -67,7 +67,7 @@ export default function App() {
                 }
               />
               <Route
-                path="/pizza-delivery/dashboard/custom"
+                path="customize"
                 element={
                   <React.Suspense
                     fallback={
@@ -79,7 +79,7 @@ export default function App() {
                 }
               />
               <Route
-                path="/pizza-delivery/dashboard/orders"
+                path="orders"
                 element={
                   <React.Suspense
                     fallback={<Loading displayItem="Loading Orders..." />}
@@ -90,7 +90,7 @@ export default function App() {
               />
             </Route>
             <Route
-              path="/pizza-delivery/login"
+              path="/login"
               element={
                 <React.Suspense
                   fallback={<Loading displayItem="Loading Login..." />}
@@ -100,7 +100,7 @@ export default function App() {
               }
             />
             <Route
-              path="/pizza-delivery/signup"
+              path="/signup"
               element={
                 <React.Suspense
                   fallback={<Loading displayItem="Loading Signup..." />}
@@ -109,7 +109,7 @@ export default function App() {
                 </React.Suspense>
               }
             />
-            <Route path="/pizza-delivery/admin" element={<PizzaComponent />} />
+            <Route path="/admin" element={<PizzaComponent />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </CartProvider>

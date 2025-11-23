@@ -93,7 +93,7 @@ export default function Entry(props) {
     }
 
     setErrorMessage("");
-    navigate("/pizza-delivery/dashboard"); // Navigate to the selected path
+    navigate("/dashboard"); // Navigate to the app dashboard after login
 
     console.log("Login Details:", loginDetails);
   }
@@ -171,9 +171,7 @@ export default function Entry(props) {
         </CardHeader>
         <CardBody>
           {errorMessage && (
-            <div className="text-reddanger text-center mb-4">
-              {errorMessage}
-            </div>
+            <div className="text-tomato text-center mb-4">{errorMessage}</div>
           )}
           <Tabs
             variant="underlined"
@@ -241,9 +239,9 @@ export default function Entry(props) {
                     className="place-self-center"
                     variant="light"
                     onClick={() => {
-                      navigate("/pizza-delivery/admin");
-                    }}
-                    href="/pizza-delivery/admin"
+                        navigate("/admin");
+                      }}
+                      href="/admin"
                   >
                     Admin?
                   </Button>

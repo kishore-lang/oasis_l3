@@ -103,7 +103,7 @@ export default function Cart({ darkMode }) {
         address: "note value",
       },
       theme: {
-        color: "bg-myhouseblue",
+        color: "#E8D7B9",
       },
     };
     const rzp1 = new Razorpay(options);
@@ -135,16 +135,16 @@ export default function Cart({ darkMode }) {
         onClose={onClose}
         classNames={{
           body: "py-6",
-          backdrop: "bg-myhouseblue/50 backdrop-opacity-40",
-          base: `border-[#292f46] ${darkMode && "bg-myhouseblue text-white"}`,
-          header: `border-b-[1px] border-[#292f46] rounded-t-lg text-white bg-myhouseblue ${
-            darkMode && "border-white bg-white text-myhouseblue"
+          backdrop: "bg-[rgba(232,215,185,0.5)] backdrop-opacity-40",
+          base: `border-[#292f46] ${darkMode && "bg-[#E8D7B9] text-white"}`,
+          header: `border-b-[1px] border-[#292f46] rounded-t-lg text-white bg-[#E8D7B9] ${
+            darkMode && "border-white bg-white text-[#E8D7B9]"
           }`,
           footer: `border-t-[1px] border-[#292f46] ${
             darkMode && "border-white"
           }`,
           closeButton: `hover:bg-white/5 text-white ${
-            darkMode && "text-myhouseblue"
+            darkMode && "text-[#E8D7B9]"
           } active:bg-white/10`,
         }}
       >
@@ -182,7 +182,7 @@ export default function Cart({ darkMode }) {
                         </div>
                       </div>
                       <Button
-                        className="bg-reddanger"
+                        className="bg-tomato"
                         size="sm"
                         variant="solid"
                         color="danger"
@@ -212,7 +212,8 @@ export default function Cart({ darkMode }) {
                 </Button>
                 <Button
                   fullWidth
-                  className="bg-[#41B06E]"
+                  className="bg-emerald-600"
+                  style={{ backgroundColor: '#6B8E23' }}
                   color="primary"
                   onPress={handlePayment} // Call payment function on press
                   isDisabled={cartItems.length === 0}

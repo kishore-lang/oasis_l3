@@ -25,11 +25,11 @@ export default function Topbar(props) {
   const { cartCount } = useCart();
   const navigate = useNavigate();
   const menuItems = [
-    { title: "Home", path: "/pizza-delivery/dashboard" },
-    { title: "Menu", path: "/pizza-delivery/dashboard/menu" },
-    { title: "Custom", path: "/pizza-delivery/dashboard/custom" },
-    { title: "Orders", path: "/pizza-delivery/dashboard/orders" },
-    { title: "Log Out", path: "/pizza-delivery/" },
+    { title: "Home", path: "/dashboard" },
+    { title: "Our Pizza", path: "/dashboard/menu" },
+    { title: "Customize", path: "/dashboard/customize" },
+    { title: "Orders", path: "/dashboard/orders" },
+    { title: "Sign Out", path: "/login" },
   ];
 
   const handleMenuItemClick = (path) => {
@@ -80,11 +80,11 @@ export default function Topbar(props) {
       <NavbarContent justify="end">
         <NavbarItem className="hidden md:flex">
           <Button
-            color="danger"
-            onClick={() => handleLogout("/pizza-delivery/")}
+            color="primary"
+            onClick={() => handleLogout("/login")}
             variant="light"
           >
-            Logout
+            Sign Out
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -95,7 +95,7 @@ export default function Topbar(props) {
               variant="shadow"
               color="success"
             >
-              <ShoppingCartIcon color="success" />
+              <ShoppingCartIcon color="inherit" />
             </Badge>
           </IconButton>
         </NavbarItem>
@@ -106,7 +106,7 @@ export default function Topbar(props) {
               isBlock
               color="primary"
               variant="light"
-              href="/pizza-delivery/login"
+              href="/login"
             >
               Login
             </Link>
@@ -116,7 +116,7 @@ export default function Topbar(props) {
           <NavbarItem className="hidden md:flex">
             <Button
               as={Link}
-              href="/pizza-delivery/signup"
+              href="/signup"
               color="primary"
               variant="ghost"
               radius="sm"
@@ -146,10 +146,10 @@ export default function Topbar(props) {
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.title}-${index}`}>
               <Button
-                color={index === 4 ? "danger" : "default"}
-                className={`text-${props.condition ? "white" : "black"} ${
-                  index === 4 && "text-danger"
-                } w-full `}
+                color={index === 4 ? "primary" : "default"}
+                className={`w-full text-left ${
+                  props.condition ? "text-white" : "text-black"
+                }`}
                 onClick={() => handleMenuItemClick(item.path)}
                 size="lg"
                 variant="light"

@@ -45,18 +45,18 @@ export default function StartPage({ darkMode, changeMode }) {
                 color="primary"
                 radius="sm"
                 size="lg"
-                href="/pizza-delivery/login"
+                href="/login"
                 as={Link}
                 variant="ghost"
               >
                 Login
               </Button>
               <Button
-                className="h-16 w-full sm:w-44 hover:bg-[#0000a1]"
+                className="h-16 w-full sm:w-44 hover:bg-tomato"
                 color="primary"
                 radius="sm"
                 size="lg"
-                href="/pizza-delivery/signup"
+                href="/signup"
                 as={Link}
               >
                 Sign up

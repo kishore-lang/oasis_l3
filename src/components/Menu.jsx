@@ -56,14 +56,22 @@ export default function Menu() {
           <Tab key="All items" title="Both">
             <div className="flex flex-wrap  w-full justify-center items-baseline gap-16">
               {pizzas.map((pizza, index) => (
-                <PizzaItem key={index} id={index} color="bg-peachblossom" />
+                <PizzaItem
+                  key={index}
+                  id={index}
+                  color={colors[index % colors.length]}
+                />
               ))}
             </div>
           </Tab>
           <Tab key="Vegetarian" title={<Image width={30} src={vegIcon} />}>
             <div className="flex flex-wrap  w-full items-center justify-center gap-16">
-              {vegetarianPizzas.map((pizza) => (
-                <PizzaItem key={pizza.id} id={pizza.id} color="bg-veggreen" />
+              {vegetarianPizzas.map((pizza, index) => (
+                <PizzaItem
+                  key={pizza.id}
+                  id={pizza.id}
+                  color={colors[index % colors.length]}
+                />
               ))}
             </div>
           </Tab>

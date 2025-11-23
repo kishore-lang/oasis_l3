@@ -106,7 +106,7 @@ const PizzaCustomization = () => {
         </CheckboxGroup>
 
         <Button
-          className="w-44 h-14 reddanger"
+          className="w-44 h-14 bg-tomato"
           color="danger"
           size="lg"
           radius="sm"

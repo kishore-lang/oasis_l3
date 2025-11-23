@@ -12,16 +12,14 @@ export default {
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
-      purple: "#3f3cbb",
+      // Pizza-themed palette
+      tomato: "#D84315",
+      basil: "#6B8E23",
+      cheese: "#F6C85F",
+      crust: "#E8D7B9",
       midnight: "#121063",
-      metal: "#565584",
-      limefrost: "#B4E380",
-      veggreen: "#C3FF93",
-      lemonburst: "#FFFF80",
-      myhouseblue: "#4C5D65",
-      peachblossom: "#fadfa1",
-      reddanger: "#FF204E",
       charcoalgray: "#424242",
+      background: "#FFF8F2",
     },
     extend: {
       fontFamily: {
@@ -37,27 +35,39 @@ export default {
       themes: {
         light: {
           colors: {
-            background: "#FFFFFF", // or DEFAULT
-            foreground: "#11181C", // or 50 to 900 DEFAULT
+            background: "#FFF8F2",
+            foreground: "#11181C",
             primary: {
-              //... 50 to 900
               foreground: "#FFFFFF",
-              DEFAULT: "#006FEE",
+              DEFAULT: "#D84315", // tomato (primary brand)
             },
-            // ... rest of the colors
+            accent: {
+              foreground: "#11181C",
+              DEFAULT: "#F6C85F", // cheese (accent)
+            },
+            success: {
+              foreground: "#FFFFFF",
+              DEFAULT: "#6B8E23", // basil (success/green)
+            },
           },
         },
         dark: {
           colors: {
-            background: "#000000", // or DEFAULT
-            foreground: "#ECEDEE", // or 50 to 900 DEFAULT
+            background: "#1F1B17",
+            foreground: "#ECEDEE",
             primary: {
-              //... 50 to 900
               foreground: "#FFFFFF",
-              DEFAULT: "#006FEE",
+              DEFAULT: "#D84315",
+            },
+            accent: {
+              foreground: "#11181C",
+              DEFAULT: "#F6C85F",
+            },
+            success: {
+              foreground: "#FFFFFF",
+              DEFAULT: "#6B8E23",
             },
           },
-          // ... rest of the colors
         },
       },
     }),

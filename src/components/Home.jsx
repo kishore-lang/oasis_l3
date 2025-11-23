@@ -27,7 +27,7 @@ export default function Home() {
                 color="primary"
                 radius="sm"
                 size="lg"
-                href="/pizza-delivery/login"
+                href="/login"
                 as={Link}
                 variant="ghost"
               >
@@ -38,7 +38,7 @@ export default function Home() {
                 color="primary"
                 radius="sm"
                 size="lg"
-                href="/pizza-delivery/signup"
+                href="/signup"
                 as={Link}
               >
                 Sign up
@@ -46,23 +46,23 @@ export default function Home() {
 
               <Button
                 fullWidth
-                className="h-14 w-72 bg-foreground text-background"
+                className="h-14 w-72 bg-foreground text-background hover:bg-tomato"
                 color="success"
                 radius="sm"
                 size="lg"
-                href="/pizza-delivery/dashboard/menu"
+                href="/dashboard/menu"
                 as={Link}
               >
                 Explore Menu
               </Button>
               <Button
                 fullWidth
-                className="h-14 w-72"
+                className="h-14 w-72 hover:bg-tomato"
                 color="warning"
                 variant="ghost"
                 radius="sm"
                 size="lg"
-                href="/pizza-delivery/dashboard/custom"
+                href="/dashboard/customize"
                 as={Link}
               >
                 Custom Pizza
@@ -79,9 +79,9 @@ export default function Home() {
         Featured Pizzas
       </h1>
       <div className="flex flex-wrap gap-20 justify-center items-center">
-        <PizzaItem color="bg-limefrost" id={0} />
-        <PizzaItem color="bg-lemonburst" id={11} />
-        <PizzaItem color="bg-limefrost" id={20} />
+        <PizzaItem color="#F6C85F" id={0} />
+        <PizzaItem color="#D84315" id={11} />
+        <PizzaItem color="#6B8E23" id={20} />
       </div>
     </div>
   );
